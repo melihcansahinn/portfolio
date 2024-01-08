@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;500;600&family=Raleway:wght@300;400;500&family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(220, 215, 201);
+}
+
+::selection {
+    background-color: rgb(25, 29, 31);
+    color: rgb(220, 215, 201);
+    text-shadow: 0px 0px 1px white;
+}
+
+/* ROOTS */
+.justify-right {
+    justify-content: right !important;
+}
+
+.justify-left {
+    justify-content: left !important;
+}
+
+.justify-center {
+    justify-content: center !important;
+}
+
+.flex-row {
+    flex-direction: row !important;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+.bg-primary {
+    background-color: rgb(83, 95, 98) !important;
+}
+
+.bg-secondary {
+    background-color: rgb(44, 54, 57) !important;
+}
+
+.content-primary {
+    color: rgb(165, 165, 165) !important;
+    text-shadow: 0px 0px 6px rgb(44, 54, 57) !important;
+}
+
+.content-secondary {
+    color: rgb(165, 165, 165) !important;
+    text-shadow: 0px 0px 3px rgb(83, 95, 98) !important;
+}
+
+.row {
+    flex-direction: row !important;
+}
+
+.row-reverse {
+    flex-direction: row-reverse !important;
+}
+
+.border-none {
+    border: none !important;
+}
+
+/* ROOTS */
+
+/* STICKY INFO */
+
+.sticky-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    color: rgb(44, 54, 57);
+    font-weight: 600;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.sticky-info .left-border,
+.sticky-info .right-border {
+    width: 30%;
+    height: 2px;
+    position: relative;
+}
+
+.sticky-info .right-border::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    width: 0%;
+    height: 2px;
+    border-top: 2px solid rgb(44, 54, 57);
+    transition: all 1s linear;
+    animation: sticky-info-border 5s infinite;
+}
+
+.sticky-info .left-border::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 0%;
+    height: 2px;
+    border-top: 2px solid rgb(44, 54, 57);
+    transition: all 1s linear;
+    animation: sticky-info-border 5s infinite;
+}
+
+.sticky-info .info-container {
+    width: 157px;
+    text-align: left;
+}
+
+.sticky-info p::before {
+    content: 'Under Development';
+}
+
+.sticky-info p::after {
+    transition: all .5s linear;
+    animation: sticky-info-dots 1.5s infinite;
+    content: '.';
+}
+
+/* STICKY INFO */
+
+/* NAVBAR */
+
+.navbar {
+    background-color: rgb(44, 54, 57);
+    color: #fff;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.navbar .menu {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 10px;
+}
+
+.navbar .menu a {
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    transition: all .5s linear;
+    position: relative;
+    display: flex;
+}
+
+.navbar .menu a.active {
+    background-color: rgb(220, 215, 201);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    color: #222;
+    display: flex;
+    justify-content: center;
+    animation: menu-item-anim 1s forwards;
+}
+
+.navbar .menu a.active::before {
+    top: 100%;
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 12px solid rgb(220, 215, 201);
+}
+
+.navbar .menu a.page::after {
+    top: 105%;
+    left: 0px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    color: rgb(220, 215, 201);
+}
+
+.navbar .menu a.page:hover::after {
+    animation: arrow-to-right .6s forwards;
+    content: '\f061';
+    text-align: right;
+}
+
+.navbar .menu a.page:hover {
+    background-color: rgb(220, 215, 201);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    color: #222;
+    animation: menu-item-anim 1s forwards;
+}
+
+.navbar .profile-photo {
+    height: 100%;
+    width: 30%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .profile-photo::after {
+    content: '<> Melihcan Sahin </>';
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0px 6px;
+    width: 355px;
+    top: 164px;
+    position: absolute;
+    color: rgb(44, 54, 57);
+    background: none;
+    background-size: 100% 100%;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: 'M PLUS 1 Code', monospace;
+    border-right: 4px solid transparent;
+    white-space: nowrap;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: all 1s linear;
+    animation:
+        name-effect 4s steps(40, end),
+        caret-effect .5s step-end 10;
+}
+
+.navbar .profile-photo::before {
+    content: "";
+    display: flex;
+    padding: 0px 6px;
+    width: 355px;
+    top: 164px;
+    position: absolute;
+    transition: all 1s linear;
+    background-color: red;
+    animation:
+        name-effect 4s steps(40, end) forwards;
+}
+
+.navbar .profile-photo .img-container {
+    top: 10px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 100% 100%;
+    border: 3px solid rgb(44, 54, 57);
+    user-select: none;
+    overflow: hidden;
+}
+
+.navbar .profile-photo img {
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 100% 100%;
+    object-fit: cover;
+    transition: all .5s linear;
+}
+
+.navbar .profile-photo img:hover {
+    filter: sepia(100%);
+    scale: 1.05;
+}
+
+/* NAVBAR END */
+
+/* SECTION CONTAINER */
+
+.container {
+    display: flex;
+    margin-top: 155px;
+    justify-content: center;
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+.container .project-container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    min-height: 550px;
+    padding: 5px 20px;
+}
+
+.container .project-container .title {
+    padding: 3px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container .project-container .title p {
+    font-size: 48px;
+    font-weight: 600;
+    padding: 0px 5% 0px 5%;
+    border-bottom: 2px solid rgb(165, 165, 165);
+}
+
+.container .project-container .project {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    padding: 20px 0px;
+    border-bottom: 1px solid wheat;
+}
+
+.container .project-container .project .project-name {
+    color: white;
+    transition: all .5s linear;
+    cursor: pointer;
+}
+
+.container .project-container .project .project-name:hover {
+    color: rgb(165, 165, 165);
+    text-shadow: rgb(44, 54, 57);
+}
+
+.container .project-container .project span.project-title {
+    font-size: 33px;
+    text-shadow: 0px 0px 10px gray;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.container .project-container .project .divider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+.container .project-container .project .divider .project-images {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0px;
+    gap: 10px;
+}
+
+.container .project-container .project .divider .project-images .item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px 10px;
+    transition: all .3s linear;
+}
+
+.container .project-container .project .divider .project-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s linear;
+}
+
+.container .project-container .project .divider .project-images .item:hover {
+    box-shadow: 0px 0px 10px white;
+}
+
+.container .project-container .project .divider .project-images .item:hover img {
+    transform: scale(1.05);
+}
+
+.container .project-container .project .divider .project-about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    margin: 20px 0px;
+    padding: 20px 0px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    transition: all 1.5s cubic-bezier(0,.6,1,.61);
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 10%);
+    cursor: pointer;
+}
+
+.container .project-container .project .divider .project-about:hover {
+    border: 1px solid wheat;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.container .project-container .project .divider .project-about span {
+    font-size: 30px;
+    color: wheat;
+}
+
+.container .project-container .project .divider .project-about p {
+    font-size: 25px;
+    color: white;
+    padding: 50px;
+}
+
+@keyframes sticky-info-border {
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes sticky-info-dots {
+
+    16.66% {
+        content: '..';
+    }
+
+    33.32% {
+        content: '...';
+    }
+
+    49.98% {
+        content: '..';
+    }
+
+    66.64% {
+        content: '.';
+    }
+
+    83.30% {
+        content: '';
+    }
+
+}
+
+@keyframes name-effect {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 355px;
+    }
+}
+
+@keyframes caret-effect {
+
+    0% {
+        border-right-color: transparent;
+    }
+    50% {
+        border-right-color: rgb(44, 54, 57);
+    }
+    100% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes clippath {
+
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 130%, 94% 130%, 94% 100%, 91% 100%, 91% 130%, 80% 130%, 78% 100%, 76% 130%, 60% 130%, 58% 100%, 56% 130%, 40% 130%, 38% 100%, 36% 130%, 20% 130%, 18% 100%, 16% 130%, 9% 130%, 9% 100%, 6% 100%, 6% 130%, 0 130%);
+    }
+    
+}
+
+@keyframes name-bg-effect {
+    0% {
+		background-position: 0% 200%;
+        background: linear-gradient(to left, rgb(44, 54, 57), rgb(220, 215, 201));
+	}
+	50% {
+		background-position: 100% 50%;
+        background: linear-gradient(to left, rgb(44, 54, 57), rgb(220, 215, 201));
+	}
+	100% {
+		background-position: 0% 200%;
+        background: linear-gradient(to left, rgb(44, 54, 57), rgb(220, 215, 201));
+	}
+}
+
+@keyframes menu-item-anim {
+    100% {
+        border-radius: 10px 2px;
+    }
+}
+
+@keyframes arrow-to-right {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 5px;
+    }
+
+}
