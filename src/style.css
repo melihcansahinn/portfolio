@@ -213,7 +213,7 @@ body {
 }
 
 .sticky-info .info-container {
-    width: calc(100vw / (1920 / var(--sticky-info-container-width)));
+    width: calc((100vw / (1920 / var(--sticky-info-container-width))) + 0.1%);
     text-align: left;
 }
 
