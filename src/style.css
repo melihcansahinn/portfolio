@@ -6,6 +6,103 @@
     box-sizing: border-box;
 }
 
+:root {
+    --content-primary-text-shadow: 6;
+    --content-secondary-text-shadow: 3;
+    --background-color-primary: 83, 95, 98;
+    --background-color-secondary: 44, 54, 57;
+    /*  */
+    --sticky-info-padding: 2;
+    --sticky-info-container-text: 16;
+    --sticky-info-container-width: 157;
+    --sticky-info-border-height: 2;
+    --sticky-info-border-after-height: 2;
+    /*  */
+    --navbar-height: 70;
+    --navbar-padding: 10;
+    /*  */
+    --navbar-menu-gap: 20;
+    --navbar-menu-padding: 10;
+    /*  */
+    --navbar-menu-a-padding: 8;
+    --navbar-menu-a-active-border: 10;
+    --navbar-menu-a-active-border-top: 12;
+    --navbar-menu-a-font-size: 16;
+    --navbar-menu-a-hover-border-top: 10;
+    --navbar-menu-a-hover-border-left: 2;
+    --navbar-menu-a-page-hover-after-right: 5;
+    /*  */
+    --navbar-profile-photo-width: 570;
+    /*  */
+    --navbar-profile-photo-after-top: 164;
+    --navbar-profile-photo-after-width: 355;
+    --navbar-profile-photo-after-font-size: 30;
+    --navbar-profile-photo-after-padding: 6;
+    --navbar-profile-photo-after-border-right: 4;
+    --navbar-profile-photo-after-letter-spacing: 2;
+    /*  */
+    --navbar-profile-photo-img-container-top: 10;
+    --navbar-profile-photo-img-container-width: 150;
+    --navbar-profile-photo-img-container-border: 3;
+    --navbar-profile-photo-img-top: 10;
+    /*  */
+    --container-margin-top: 155;
+    /*  */
+    --project-container-min-height: 550;
+    --project-container-padding-left: 20;
+    --project-container-padding-top: 5;
+    /*  */
+    --project-container-title-padding: 5;
+    /*  */
+    --project-container-title-p-font-size: 48;
+    --project-container-title-p-border: 2;
+    /*  */
+    --project-container-project-padding: 20;
+    --project-container-project-border-bottom: 2;
+    /*  */
+    --project-container-project-name-margin-bottom: 10;
+    --project-container-project-name-hover-text-shadow: 10;
+    /*  */
+    --project-container-project-project-title-font-size: 33;
+    --project-container-project-project-title-text-shadow: 10;
+    --project-container-project-project-title-padding: 15;
+    --project-container-project-project-title-margin-bottom: 10;
+    /*  */
+    --project-container-project-divider-gap: 20;
+    /*  */
+    --project-container-project-divider-project-images-column: 460;
+    --project-container-project-divider-project-images-row: 270;
+    --project-container-project-divider-project-images-padding: 20;
+    --project-container-project-divider-project-images-gap: 10;
+    /*  */
+    --project-container-project-divider-project-images-item-border-radius: 10;
+    --project-container-project-divider-project-images-item-hover-box-shadow: 10;
+    --project-container-project-divider-project-images-item-hover-border: 2;
+    /*  */
+    --project-container-project-divider-project-about-gap: 50;
+    --project-container-project-divider-project-about-margin: 20;
+    --project-container-project-divider-project-about-padding: 20;
+    --project-container-project-divider-project-about-height: 590;
+    --project-container-project-divider-project-about-border: 1;
+    --project-container-project-divider-project-about-border-radius: 20;
+    --project-container-project-divider-project-about-clip-path-height: 60;
+    --project-container-project-divider-project-about-hover-border: 1;
+    /*  */
+    --project-container-project-divider-project-about-span-font-size: 30;
+    --project-container-project-divider-project-about-span-after-text-shadow: 10;
+    /*  */
+    --project-container-project-divider-project-about-p-font-size: 25;
+    --project-container-project-divider-project-about-p-padding: 50;
+    --project-container-project-divider-project-about-p-margin-right: 5;
+    --project-container-project-divider-project-about-p-hover-margin-right: 1;
+    /*  */
+    --project-container-project-divider-project-about-p-scrollbar-width: 5;
+    --project-container-project-divider-project-about-p-scrollbar-track-margin-top: 20;
+    --project-container-project-divider-project-about-p-scrollbar-thumb-border-radius: 10;
+    --project-container-project-divider-project-about-p-scrollbar-thumb-box-shadow: 5;
+    --project-container-project-divider-project-about-p-scrollbar-thumb-hover-box-shadow: 2;
+}
+
 body {
     font-family: 'Ubuntu', sans-serif;
     background-color: rgb(220, 215, 201);
@@ -39,21 +136,21 @@ body {
 }
 
 .bg-primary {
-    background-color: rgb(83, 95, 98) !important;
+    background-color: rgb(var(--background-color-primary)) !important;
 }
 
 .bg-secondary {
-    background-color: rgb(44, 54, 57) !important;
+    background-color: rgb(var(--background-color-secondary)) !important;
 }
 
 .content-primary {
     color: rgb(165, 165, 165) !important;
-    text-shadow: 0px 0px 6px rgb(44, 54, 57) !important;
+    text-shadow: 0px 0px calc(100vw / (1920 / var(--content-primary-text-shadow))) rgb(44, 54, 57) !important;
 }
 
 .content-secondary {
     color: rgb(165, 165, 165) !important;
-    text-shadow: 0px 0px 3px rgb(83, 95, 98) !important;
+    text-shadow: 0px 0px calc(100vw / (1920 / var(--content-secondary-text-shadow))) rgb(83, 95, 98) !important;
 }
 
 .row {
@@ -76,7 +173,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2px;
+    padding: calc(100vw / (1920 / var(--sticky-info-padding)));
     color: rgb(44, 54, 57);
     font-weight: 600;
     width: 100%;
@@ -87,7 +184,7 @@ body {
 .sticky-info .left-border,
 .sticky-info .right-border {
     width: 30%;
-    height: 2px;
+    height: calc(100vw / (1920 / var(--sticky-info-border-height)));
     position: relative;
 }
 
@@ -96,8 +193,8 @@ body {
     content: '';
     right: 0;
     width: 0%;
-    height: 2px;
-    border-top: 2px solid rgb(44, 54, 57);
+    height: calc(100vw / (1920 / var(--sticky-info-border-after-height)));
+    border-top: calc(100vw / (1920 / var(--sticky-info-border-after-height))) solid rgb(44, 54, 57);
     transition: all 1s linear;
     animation: sticky-info-border 5s infinite;
 }
@@ -107,24 +204,31 @@ body {
     content: '';
     left: 0;
     width: 0%;
-    height: 2px;
-    border-top: 2px solid rgb(44, 54, 57);
+    height: calc(100vw / (1920 / var(--sticky-info-border-after-height)));
+    border-top: calc(100vw / (1920 / var(--sticky-info-border-after-height))) solid rgb(44, 54, 57);
     transition: all 1s linear;
     animation: sticky-info-border 5s infinite;
 }
 
 .sticky-info .info-container {
-    width: 157px;
+    width: calc(100vw / (1920 / var(--sticky-info-container-width)));
     text-align: left;
+}
+
+.sticky-info .info-container p {
+    display: flex;
+    align-items: center;
 }
 
 .sticky-info p::before {
     content: 'Under Development';
+    font-size: calc(100vw / (1920 / var(--sticky-info-container-text)));
 }
 
 .sticky-info p::after {
     transition: all .5s linear;
     animation: sticky-info-dots 1.5s infinite;
+    font-size: calc(100vw / (1920 / var(--sticky-info-container-text)));
     content: '.';
 }
 
@@ -135,11 +239,11 @@ body {
 .navbar {
     background-color: rgb(44, 54, 57);
     color: #fff;
-    height: 70px;
+    height: calc(100vw / (1920 / var(--navbar-height)));
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 calc(100vw / (1920 / var(--navbar-padding)));
     position: relative;
     z-index: 2;
 }
@@ -149,16 +253,17 @@ body {
     width: 30%;
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 0px 10px;
+    gap: calc(100vw / (1920 / var(--navbar-menu-gap)));
+    padding: 0px calc(100vw / (1920 / var(--navbar-menu-padding)));
 }
 
 .navbar .menu a {
-    padding: 8px;
+    padding: calc(100vw / (1920 / var(--navbar-menu-a-padding)));
     text-decoration: none;
     color: white;
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
+    font-size: calc(100vw / (1920 / var(--navbar-menu-a-font-size)));
     transition: all .5s linear;
     position: relative;
     display: flex;
@@ -180,9 +285,9 @@ body {
     height: 0;
     position: absolute;
     content: '';
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 12px solid rgb(220, 215, 201);
+    border-left: calc(100vw / (1920 / var(--navbar-menu-a-active-border))) solid transparent;
+    border-right: calc(100vw / (1920 / var(--navbar-menu-a-active-border))) solid transparent;
+    border-top: calc(100vw / (1920 / var(--navbar-menu-a-active-border-top))) solid rgb(220, 215, 201);
 }
 
 .navbar .menu a.page::after {
@@ -210,7 +315,7 @@ body {
 
 .navbar .profile-photo {
     height: 100%;
-    width: 30%;
+    width: calc(100vw / (1920 / var(--navbar-profile-photo-width)));
     position: relative;
     display: flex;
     justify-content: center;
@@ -222,19 +327,19 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
-    padding: 0px 6px;
-    width: 355px;
-    top: 164px;
+    padding: 0px calc(100vw / (1920 / var(--navbar-profile-photo-after-padding)));
+    width: calc(100vw / (1920 / var(--navbar-profile-photo-after-width)));
+    top: calc(100vw / (1920 / var(--navbar-profile-photo-after-top)));
     position: absolute;
     color: rgb(44, 54, 57);
     background: none;
     background-size: 100% 100%;
     font-weight: 600;
-    font-size: 30px;
+    font-size: calc(100vw / (1920 / var(--navbar-profile-photo-after-font-size)));
     font-family: 'M PLUS 1 Code', monospace;
-    border-right: 4px solid transparent;
+    border-right: calc(100vw / (1920 / var(--navbar-profile-photo-after-border-right))) solid transparent;
     white-space: nowrap;
-    letter-spacing: 2px;
+    letter-spacing: calc(100vw / (1920 / var(--navbar-profile-photo-after-letter-spacing)));
     overflow: hidden;
     transition: all 1s linear;
     animation:
@@ -242,32 +347,20 @@ body {
         caret-effect .5s step-end 10;
 }
 
-.navbar .profile-photo::before {
-    content: "";
-    display: flex;
-    padding: 0px 6px;
-    width: 355px;
-    top: 164px;
-    position: absolute;
-    transition: all 1s linear;
-    background-color: red;
-    animation:
-        name-effect 4s steps(40, end) forwards;
-}
-
 .navbar .profile-photo .img-container {
-    top: 10px;
-    width: 150px;
-    height: 150px;
+    top: calc(100vw / (1920 / var(--navbar-profile-photo-img-container-top)));
+    ;
+    width: calc(100vw / (1920 / var(--navbar-profile-photo-img-container-width)));
+    height: calc(100vw / (1920 / var(--navbar-profile-photo-img-container-width)));
     position: absolute;
     border-radius: 100% 100%;
-    border: 3px solid rgb(44, 54, 57);
+    border: calc(100vw / (1920 / var(--navbar-profile-photo-img-container-border))) solid rgb(44, 54, 57);
     user-select: none;
     overflow: hidden;
 }
 
 .navbar .profile-photo img {
-    top: 10px;
+    top: calc(100vw / (1920 / var(--navbar-profile-photo-img-top)));
     width: 100%;
     height: 100%;
     border-radius: 100% 100%;
@@ -286,7 +379,7 @@ body {
 
 .container {
     display: flex;
-    margin-top: 155px;
+    margin-top: calc(100vw / (1920 / var(--container-margin-top)));
     justify-content: center;
     height: 100%;
     font-family: 'Raleway', sans-serif;
@@ -299,22 +392,22 @@ body {
     justify-content: start;
     align-items: start;
     width: 100%;
-    min-height: 550px;
-    padding: 5px 20px;
+    min-height: calc(100vw / (1920 / var(--project-container-min-height)));
+    padding: calc(100vw / (1920 / var(--project-container-padding-top))) calc(100vw / (1920 / var(--project-container-padding-left)));
 }
 
 .container .project-container .title {
-    padding: 3px;
+    padding: calc(100vw / (1920 / var(--project-container-title-padding)));
     width: 100%;
     display: flex;
     align-items: center;
 }
 
 .container .project-container .title p {
-    font-size: 48px;
+    font-size: calc(100vw / (1920 / var(--project-container-title-p-font-size)));
     font-weight: 600;
     padding: 0px 5% 0px 5%;
-    border-bottom: 2px solid rgb(165, 165, 165);
+    border-bottom: calc(100vw / (1920 / var(--project-container-title-p-border))) solid rgb(165, 165, 165);
 }
 
 .container .project-container .project {
@@ -324,50 +417,51 @@ body {
     justify-content: center;
     flex-direction: column;
     color: white;
-    padding: 20px 0px;
-    border-bottom: 1px solid wheat;
+    padding: calc(100vw / (1920 / var(--project-container-project-padding))) 0px;
+    border-bottom: calc(100vw / (1920 / var(--project-container-project-border-bottom))) solid wheat;
 }
 
 .container .project-container .project .project-name {
     color: white;
     transition: all .5s linear;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: calc(100vw / (1920 / var(--project-container-project-name-margin-bottom)));
 }
 
 .container .project-container .project .project-name:hover {
     color: wheat;
-    text-shadow: 0px 0px 10px rgb(44, 54, 57);
+    text-shadow: 0px 0px calc(100vw / (1920 / var(--project-container-project-name-hover-text-shadow))) rgb(44, 54, 57);
 }
 
 .container .project-container .project span.project-title {
-    font-size: 33px;
-    text-shadow: 0px 0px 10px gray;
-    padding: 15px;
-    margin-bottom: 10px;
+    font-size: calc(100vw / (1920 / var(--project-container-project-project-title-font-size)));
+    text-shadow: 0px 0px calc(100vw / (1920 / var(--project-container-project-project-title-text-shadow))) gray;
+    padding: calc(100vw / (1920 / var(--project-container-project-project-title-padding)));
+    margin-bottom: calc(100vw / (1920 / var(--project-container-project-project-title-margin-bottom)));
 }
 
 .container .project-container .project .divider {
     display: flex;
     width: 100%;
     height: 100%;
-    gap: 20px;
+    gap: calc(100vw / (1920 / var(--project-container-project-divider-gap)));
 }
 
 .container .project-container .project .divider .project-images {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px 0px;
-    gap: 10px;
+    grid-template-columns: calc(100vw / (1920 / var(--project-container-project-divider-project-images-column))) calc(100vw / (1920 / var(--project-container-project-divider-project-images-column)));
+    grid-template-rows: calc(100vw / (1920 / var(--project-container-project-divider-project-images-row)));
+    padding: calc(100vw / (1920 / var(--project-container-project-divider-project-images-padding))) 0px;
+    gap: calc(100vw / (1920 / var(--project-container-project-divider-project-images-gap)));
 }
 
 .container .project-container .project .divider .project-images .item {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: 10px 10px;
+    border-radius: calc(100vw / (1920 / var(--project-container-project-divider-project-images-item-border-radius)));
     transition: all .3s linear;
 }
 
@@ -379,8 +473,8 @@ body {
 }
 
 .container .project-container .project .divider .project-images .item:hover {
-    box-shadow: 0px 0px 10px white;
-    border: 2px solid white;
+    box-shadow: 0px 0px calc(100vw / (1920 / var(--project-container-project-divider-project-images-item-hover-box-shadow))) white;
+    border: calc(100vw / (1920 / var(--project-container-project-divider-project-images-item-hover-border))) solid white;
 }
 
 .container .project-container .project .divider .project-images .item:hover img {
@@ -392,64 +486,90 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
-    gap: 50px;
-    margin: 20px 0px;
-    padding: 20px 0px;
+    gap: calc(100vw / (1920 / var(--project-container-project-divider-project-about-gap)));
+    margin-top: calc(100vw / (1920 / var(--project-container-project-divider-project-about-margin)));
+    height: calc(100vw / (1920 / var(--project-container-project-divider-project-about-height)));
+    padding: calc(100vw / (1920 / var(--project-container-project-divider-project-about-padding))) 0px;
     background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: 20px;
-    transition: all 1.5s cubic-bezier(0,.6,1,.61);
-    clip-path: polygon(0 0, 100% 0, 100% 20%, 0 20%);
+    border: calc(100vw / (1920 / var(--project-container-project-divider-project-about-border))) solid transparent;
+    border-radius: calc(100vw / (1920 / var(--project-container-project-divider-project-about-border-radius)));
+    transition: all 1.5s cubic-bezier(0, .6, 1, .61);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100vw / (1920 / var(--project-container-project-divider-project-about-clip-path-height))), 0 calc(100vw / (1920 / var(--project-container-project-divider-project-about-clip-path-height))));
     cursor: pointer;
 }
 
 .container .project-container .project .divider .project-about:hover {
-    border: 1px solid wheat;
+    border: calc(100vw / (1920 / var(--project-container-project-divider-project-about-hover-border))) solid wheat;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .container .project-container .project .divider .project-about span {
-    font-size: 30px;
+    font-size: calc(100vw / (1920 / var(--project-container-project-divider-project-about-span-font-size)));
     color: wheat;
     position: relative;
 }
 
-.container .project-container .project .divider .project-about:hover span::before, .container .project-container .project .divider .project-about:hover span::after  {
+.container .project-container .project .divider .project-about:hover span::before,
+.container .project-container .project .divider .project-about:hover span::after {
     content: '';
 }
 
-.container .project-container .project .divider .project-about span::before {
-    content: '\f078';
-    position: absolute;
-    font-family: 'Font Awesome 6 Free';
-    left: 120%;
-    top: -20%;
-    font-size: 33px;
-    font-weight: 900;
-    text-shadow: 0px 0px 10px gray;
-    transition: all 3s linear;
-    animation: project-title-hover 3s infinite;
-}
-
+.container .project-container .project .divider .project-about span::before,
 .container .project-container .project .divider .project-about span::after {
     content: '\f078';
     position: absolute;
     font-family: 'Font Awesome 6 Free';
-    top: 20%;
     left: 120%;
-    font-size: 33px;
+    font-size: calc(100vw / (1920 / var(--project-container-project-divider-project-about-span-font-size)));
     font-weight: 900;
-    text-shadow: 0px 0px 10px gray;
+    text-shadow: 0px 0px calc(100vw / (1920 / var(--project-container-project-divider-project-about-span-after-text-shadow))) gray;
     transition: all 3s linear;
+    animation: project-title-hover 3s infinite;
+}
+
+.container .project-container .project .divider .project-about span::before {
+    top: -20%;
+    animation: project-title-hover 3s infinite;
+}
+
+.container .project-container .project .divider .project-about span::after {
+    top: 20%;
     animation: project-title-hover-2 3s infinite;
 }
 
 .container .project-container .project .divider .project-about p {
-    font-size: 25px;
+    font-size: calc(100vw / (1920 / var(--project-container-project-divider-project-about-p-font-size)));
     color: white;
-    padding: 50px;
+    padding: calc(100vw / (1920 / var(--project-container-project-divider-project-about-p-padding)));
+    overflow: hidden;
+    margin-right: calc(100vw / (1920 / var(--project-container-project-divider-project-about-p-margin-right)));
+}
+
+.container .project-container .project .divider .project-about p:hover {
+    overflow-y: scroll;
+    margin-right: calc(100vw / (1920 / var(--project-container-project-divider-project-about-p-hover-margin-right)));
+}
+
+.container .project-container .project .divider .project-about p::-webkit-scrollbar {
+    width: calc(100vw / (1920 / var(--project-container-project-divider-project-about-p-scrollbar-width)));
+}
+
+.container .project-container .project .divider .project-about p::-webkit-scrollbar-track {
+    margin: calc(100vw / (1920 / var(--project-container-project-divider-project-about-p-scrollbar-track-margin-top))) 0px;
+    background-color: transparent;
+}
+
+.container .project-container .project .divider .project-about p::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: calc(100vw / (1920 / var(--project-container-project-divider-project-about-p-scrollbar-thumb-border-radius)));
+    box-shadow: inset 0px 0px calc(100vw / (1920 / var(--project-container-project-divider-project-about-p-scrollbar-thumb-box-shadow))) white;
+}
+
+.container .project-container .project .divider .project-about p::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    box-shadow: inset 0px 0px calc(100vw / (1920 / var(--project-container-project-divider-project-about-p-scrollbar-thumb-hover-box-shadow))) white;
 }
 
 @keyframes sticky-info-border {
@@ -492,7 +612,7 @@ body {
     }
 
     to {
-        width: 355px;
+        width: calc(100vw / (1920 / var(--navbar-profile-photo-after-width)));
     }
 }
 
@@ -501,43 +621,39 @@ body {
     0% {
         border-right-color: transparent;
     }
+
     50% {
         border-right-color: rgb(44, 54, 57);
     }
+
     100% {
         border-right-color: transparent;
     }
-}
-
-@keyframes clippath {
-
-    100% {
-        clip-path: polygon(0 0, 100% 0, 100% 130%, 94% 130%, 94% 100%, 91% 100%, 91% 130%, 80% 130%, 78% 100%, 76% 130%, 60% 130%, 58% 100%, 56% 130%, 40% 130%, 38% 100%, 36% 130%, 20% 130%, 18% 100%, 16% 130%, 9% 130%, 9% 100%, 6% 100%, 6% 130%, 0 130%);
-    }
-    
 }
 
 @keyframes project-title-hover {
     40% {
         top: -2%;
     }
-	80% {
-		top: -20%;
-	}
+
+    80% {
+        top: -20%;
+    }
 }
 
 @keyframes project-title-hover-2 {
     40% {
         top: 22%;
     }
-	80% {
-		top: 0%;
-	}
+
+    80% {
+        top: 0%;
+    }
 }
 
 @keyframes menu-item-anim {
     100% {
-        border-radius: 10px 2px;
+        border-radius: calc(100vw / (1920 / var(--navbar-menu-a-hover-border-top))) calc(100vw / (1920 / var(--navbar-menu-a-hover-border-left)));
     }
 }
 
@@ -547,7 +663,10 @@ body {
     }
 
     100% {
-        right: 5px;
+        right: calc(100vw / (1920 / var(--navbar-menu-a-page-hover-after-right)));
     }
 
 }
+
+
+@media screen and (min-width:1920px) {}
