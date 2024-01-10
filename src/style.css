@@ -727,7 +727,7 @@ body {
         --res-sticky-info-height: 30;
         --res-sticky-info-border-height: 2;
         --res-sticky-info-border-top: 5;
-        --res-sticky-info-info-container-width: 159;
+        --res-sticky-info-info-container-width: 165;
         --res-sticky-info-p-font-size: 16;
         /*  */
         --res-navbar-menu-height: 120;
@@ -824,20 +824,24 @@ body {
 
     .sticky-info .right-border::after,
     .sticky-info .left-border::after {
-        border-top: calc(100vw / (412 / var(--res-sticky-info-border-top))) solid rgb(44, 54, 57);
+        border-top: calc(100vh / (915 / var(--res-sticky-info-border-top))) solid rgb(44, 54, 57);
     }
 
     .sticky-info .info-container {
-        width: calc(100vw / (412 / var(--res-sticky-info-info-container-width)));
+        width: 100%;
         text-align: left;
+    }
+    .sticky-info p {
+        justify-content: center;
     }
 
     .sticky-info p::before {
-        font-size: calc(100vw / (412 / var(--res-sticky-info-p-font-size)));
+        font-size: calc(100vh / (915 / var(--res-sticky-info-p-font-size)));
     }
 
     .sticky-info p::after {
-        font-size: calc(100vw / (412 / var(--res-sticky-info-p-font-size)));
+        animation: none;
+        content: '';
     }
 
     /* STICKY INFO RESPONSIVE END */
@@ -1039,7 +1043,7 @@ body {
 
     .footer .socials img {
         width: 100%;
-        height: calc(100vh / (915 / var(--res-footer-socials-img-height)));;
+        height: calc(100vw / (412 / var(--res-footer-socials-img-height)));;
         object-fit: cover;
     }
 
