@@ -84,7 +84,7 @@
     --project-container-project-divider-project-about-gap: 50;
     --project-container-project-divider-project-about-margin: 20;
     --project-container-project-divider-project-about-padding: 20;
-    --project-container-project-divider-project-about-height: 590;
+    --project-container-project-divider-project-about-height: 550;
     --project-container-project-divider-project-about-border: 1;
     --project-container-project-divider-project-about-border-radius: 20;
     --project-container-project-divider-project-about-clip-path-height: 60;
@@ -359,7 +359,6 @@ body {
 
 .navbar .profile-photo .img-container {
     top: calc(100vw / (1920 / var(--navbar-profile-photo-img-container-top)));
-    ;
     width: calc(100vw / (1920 / var(--navbar-profile-photo-img-container-width)));
     height: calc(100vw / (1920 / var(--navbar-profile-photo-img-container-width)));
     position: absolute;
@@ -370,10 +369,10 @@ body {
 }
 
 .navbar .profile-photo img {
-    top: calc(100vw / (1920 / var(--navbar-profile-photo-img-top)));
     width: 100%;
     height: 100%;
     border-radius: 100% 100%;
+    position: absolute;
     object-fit: cover;
     transition: all .5s linear;
 }
@@ -463,6 +462,7 @@ body {
     display: grid;
     grid-template-columns: calc(100vw / (1920 / var(--project-container-project-divider-project-images-column))) calc(100vw / (1920 / var(--project-container-project-divider-project-images-column)));
     grid-template-rows: calc(100vw / (1920 / var(--project-container-project-divider-project-images-row)));
+    grid-auto-rows: calc(100vw / (1920 / var(--project-container-project-divider-project-images-row)));
     padding: calc(100vw / (1920 / var(--project-container-project-divider-project-images-padding))) 0px;
     gap: calc(100vw / (1920 / var(--project-container-project-divider-project-images-gap)));
 }
@@ -720,4 +720,356 @@ body {
 }
 
 
-@media screen and (min-width:1920px) {}
+@media screen and (orientation: portrait) {
+
+    :root {
+        --res-sticky-info-padding: 10;
+        --res-sticky-info-height: 30;
+        --res-sticky-info-border-height: 2;
+        --res-sticky-info-border-top: 5;
+        --res-sticky-info-info-container-width: 159;
+        --res-sticky-info-p-font-size: 16;
+        /*  */
+        --res-navbar-menu-height: 120;
+        --res-navbar-menu-padding-top: 15;
+        --res-navbar-menu-padding-left: 30;
+        /*  */
+        --res-navbar-menu-a-height: 50;
+        --res-navbar-menu-a-font-size: 20;
+        --res-navbar-menu-a-active-border-top: 10;
+        --res-navbar-menu-a-active-border-left: 20;
+        --res-menu-a-page-hover-menu-item-anim-border-radius-top: 15;
+        --res-menu-a-page-hover-menu-item-anim-border-radius-left: 3;
+        /*  */
+        --res-navbar-profile-photo-img-container-top: 35;
+        --res-navbar-profile-photo-img-container-width: 120;
+        --res-navbar-profile-photo-img-container-border: 4;
+        /*  */
+        --res-navbar-profile-photo-after-padding-left: 6;
+        --res-navbar-profile-photo-after-width: 175;
+        --res-navbar-profile-photo-after-top: 85;
+        --res-navbar-profile-photo-after-font-size: 15;
+        --res-navbar-profile-photo-after-border-right: 2;
+        --res-navbar-profile-photo-after-letter-spacing: 1;
+        /*  */
+        --res-container-margin-top: 65;
+        /*  */
+        --res-container-project-container-padding: 15;
+        /*  */
+        --res-container-project-container-title-padding: 5;
+        --res-container-project-container-title-p-font-size: 27;
+        --res-container-project-container-title-p-border-bottom: 3;
+        --res-container-project-container-title-p-after-border-top: 2;
+        --res-container-project-container-title-p-after-top: 2;
+        /*  */
+        --res-container-project-container-project-padding: 5;
+        --res-container-project-container-project-border-bottom: 1;
+        --res-container-project-container-project-margin-bottom: 5;
+        /*  */
+        --res-container-project-container-project-name-margin-bottom: 10;
+        --res-container-project-container-project-name-hover-text-shadow: 10;
+        /*  */
+        --res-container-project-container-project-project-title-font-size: 18;
+        --res-container-project-container-project-project-title-padding: 15;
+        --res-container-project-container-project-project-title-text-shadow: 10;
+        /*  */
+        --res-container-project-container-project-divider-gap: 10;
+        /*  */
+        --res-container-project-container-project-divider-project-images-column-width: 181;
+        --res-container-project-container-project-divider-project-images-row-height: 109;
+        --res-container-project-container-project-divider-project-images-gap: 10;
+        --res-container-project-container-project-divider-project-images-padding: 5;
+        --res-container-project-container-project-divider-project-images-item-border-radius: 4;
+        --res-container-project-container-project-divider-project-images-item-hover-box-shadow: 10;
+        --res-container-project-container-project-divider-project-images-item-hover-border: 1;
+        /*  */
+        --res-container-project-container-project-divider-project-about-gap: 20;
+        --res-container-project-container-project-divider-project-about-margin-top: 20;
+        --res-container-project-container-project-divider-project-about-padding-top: 20;
+        --res-container-project-container-project-divider-project-about-border: 1;
+        --res-container-project-container-project-divider-project-about-border-radius: 10;
+        /*  */
+        --res-container-project-container-project-divider-project-about-span-font-size: 18;
+        --res-container-project-container-project-divider-project-about-span-padding-top: 10;
+        --res-container-project-container-project-divider-project-about-span-padding-left: 2;
+        /*  */
+        --res-container-project-container-project-divider-project-about-p-font-size: 14;
+        --res-container-project-container-project-divider-project-about-p-padding: 20;
+        /*  */
+
+        --res-footer-padding: 5;
+        --res-footer-gap: 5;
+        --res-footer-span-font-size: 14;
+        --res-footer-socials-gap: 8;
+        --res-footer-socials-img-height: 20;
+        --res-footer-margin-bottom: 35;
+
+    }
+
+    /* STICKY INFO RESPONSIVE */
+
+    .sticky-info {
+        background-color: rgb(220, 215, 201);
+        position: fixed;
+        bottom: 0;
+        padding: calc(100vw / (412 / var(--res-sticky-info-padding)));
+        align-items: center;
+        height: calc(100vh / (915 / var(--res-sticky-info-height)));
+    }
+
+    .sticky-info .left-border,
+    .sticky-info .right-border {
+        height: calc(100vh / (915 / var(--res-sticky-info-border-height)));
+    }
+
+    .sticky-info .right-border::after,
+    .sticky-info .left-border::after {
+        border-top: calc(100vw / (412 / var(--res-sticky-info-border-top))) solid rgb(44, 54, 57);
+    }
+
+    .sticky-info .info-container {
+        width: calc(100vw / (412 / var(--res-sticky-info-info-container-width)));
+        text-align: left;
+    }
+
+    .sticky-info p::before {
+        font-size: calc(100vw / (412 / var(--res-sticky-info-p-font-size)));
+    }
+
+    .sticky-info p::after {
+        font-size: calc(100vw / (412 / var(--res-sticky-info-p-font-size)));
+    }
+
+    /* STICKY INFO RESPONSIVE END */
+
+    /* NAVBAR RESPONSIVE */
+
+    .navbar {
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .navbar .menu {
+        width: 50%;
+        gap: 0;
+        padding: calc(100vh / (915 / var(--res-navbar-menu-padding-top))) calc(100vw / (412 / var(--res-navbar-menu-padding-left)));
+        height: calc(100vh / (915 / var(--res-navbar-menu-height)));
+    }
+
+    .navbar .menu a {
+        height: calc(100vh / (915 / var(--res-navbar-menu-a-height)));
+        font-size: calc(100vw / (412 / var(--res-navbar-menu-a-font-size)));
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar .menu a.active::before {
+        top: 99%;
+        border-left: calc(100vw / (412 / var(--res-navbar-menu-a-active-border-left))) solid transparent;
+        border-right: calc(100vw / (412 / var(--res-navbar-menu-a-active-border-left))) solid transparent;
+        border-top: calc(100vw / (412 / var(--res-navbar-menu-a-active-border-top))) solid rgb(220, 215, 201);
+    }
+
+    .navbar .profile-photo {
+        height: 100%;
+        width: 40%;
+    }
+
+    .navbar .profile-photo::after {
+        padding: 0px calc(100vw / (412 / var(--res-navbar-profile-photo-after-padding-left)));
+        width: calc(100vw / (412 / var(--res-navbar-profile-photo-after-width)));
+        top: calc(100vw / (412 / var(--res-navbar-profile-photo-after-top)));
+        font-size: calc(100vw / (412 / var(--res-navbar-profile-photo-after-font-size)));
+        border-right: calc(100vw / (412 / var(--res-navbar-profile-photo-after-border-right))) solid transparent;
+        white-space: nowrap;
+        letter-spacing: calc(100vw / (412 / var(--res-navbar-profile-photo-after-letter-spacing)));
+    }
+
+    .navbar .profile-photo .img-container {
+        top: calc(100vw / (412 / var(--res-navbar-profile-photo-img-container-top)) * -1);
+        width: calc(100vw / (412 / var(--res-navbar-profile-photo-img-container-width)));
+        height: calc(100vw / (412 / var(--res-navbar-profile-photo-img-container-width)));
+        border-radius: 100% 100%;
+        border: calc(100vw / (412 / var(--res-navbar-profile-photo-img-container-border))) solid rgb(44, 54, 57);
+    }
+
+    .navbar .profile-photo img {
+        width: 100%;
+        height: 100%;
+        border-radius: 100% 100%;
+        object-fit: cover;
+        transition: all .5s linear;
+    }
+
+    /* NAVBAR RESPONSIVE END */
+
+    /* SECTION CONTAINER RESPONSIVE */
+
+    .container {
+        margin-top: calc(100vw / (412 / var(--res-container-margin-top)));
+    }
+
+    .container .project-container {
+        padding: calc(100vw / (412 / var(--res-container-project-container-padding)));
+    }
+
+    .container .project-container .title {
+        padding: calc(100vw / (412 / var(--res-container-project-container-title-padding)));
+    }
+
+    .container .project-container .title p {
+        font-size: calc(100vw / (412 / var(--res-container-project-container-title-p-font-size)));
+        border-bottom: calc(100vw / (412 / var(--res-container-project-container-title-p-border-bottom))) solid rgb(165, 165, 165);
+        position: relative;
+    }
+
+    .container .project-container .title p::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-top: calc(100vw / (412 / var(--res-container-project-container-title-p-after-border-top))) solid wheat;
+        top: calc(100% + (100vh / (915 / var(--res-container-project-container-title-p-after-top))));
+        left: 0;
+    }
+
+    .container .project-container .project {
+        padding: calc(100vw / (412 / var(--res-container-project-container-project-padding)));
+        border-bottom: calc(100vw / (412 / var(--res-container-project-container-project-border-bottom))) solid white;
+        margin-bottom: calc(100vh / (915 / var(--res-container-project-container-project-margin-bottom)));
+    }
+
+    .container .project-container .project .project-name {
+        margin-bottom: calc(100vh / (915 / var(--res-container-project-container-project-name-margin-bottom)));
+    }
+
+    .container .project-container .project .project-name:hover {
+        color: wheat;
+        text-shadow: 0px 0px calc(100vw / (412 / var(--res-container-project-container-project-name-hover-text-shadow))) rgb(44, 54, 57);
+    }
+
+    .container .project-container .project span.project-title {
+        font-size: calc(100vw / (412 / var(--res-container-project-container-project-project-title-font-size)));
+        text-shadow: 0px 0px calc(100vw / (412 / var(--res-container-project-container-project-project-title-text-shadow))) gray;
+        padding: calc(100vw / (412 / var(--res-container-project-container-project-project-title-padding)));
+    }
+
+    .container .project-container .project .divider {
+        gap: calc(100vw / (412 / var(--res-container-project-container-project-divider-gap)));
+    }
+
+    .container .project-container .project .divider .project-images {
+        grid-template-columns: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-images-column-width))) calc(100vw / (412 / var(--res-container-project-container-project-divider-project-images-column-width)));
+        grid-template-rows: calc(100vh / (915 / var(--res-container-project-container-project-divider-project-images-row-height)));
+        grid-auto-rows: calc(100vh / (915 / var(--res-container-project-container-project-divider-project-images-row-height)));
+        padding: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-images-padding))) 0px;
+        gap: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-images-gap)));
+    }
+
+    .container .project-container .project .divider .project-images .item {
+        border-radius: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-images-item-border-radius)));
+    }
+
+    .container .project-container .project .divider .project-images .item:hover {
+        box-shadow: 0px 0px calc(100vw / (412 / var(--res-container-project-container-project-divider-project-images-item-hover-box-shadow))) white;
+        border: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-images-item-hover-border))) solid white;
+    }
+
+    .container .project-container .project .divider .project-about {
+        gap: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-about-gap)));
+        margin: calc(100vh / (915 / var(--res-container-project-container-project-divider-project-about-margin-top))) 0px;
+        height: 100%;
+        padding: calc(100vh / (915 / var(--res-container-project-container-project-divider-project-about-padding-top))) 0px;
+        background-color: transparent;
+        border: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-about-border))) solid wheat;
+        border-radius: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-about-border-radius)));
+        transition: none;
+        clip-path: none;
+    }
+
+    .container .project-container .project .divider .project-about:hover {
+        border: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-about-border))) solid wheat;
+        clip-path: none;
+    }
+
+    .container .project-container .project .divider .project-about span {
+        font-size: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-about-span-font-size)));
+        padding: calc(100vh / (915 / var(--res-container-project-container-project-divider-project-about-span-padding-top))) calc(100vw / (412 / var(--res-container-project-container-project-divider-project-about-span-padding-left)));
+        border-bottom: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-about-border))) solid wheat;
+    }
+
+    .container .project-container .project .divider .project-about span::before,
+    .container .project-container .project .divider .project-about span::after {
+        content: '';
+    }
+
+    .container .project-container .project .divider .project-about p {
+        font-size: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-about-p-font-size)));
+        color: white;
+        padding: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-about-p-padding)));
+        overflow: hidden;
+        margin-right: 0;
+    }
+
+    .container .project-container .project .divider .project-about p:hover {
+        overflow-y: hidden;
+        margin-right: 0;
+    }
+
+    /* CONTAINER END RESPONSIVE */
+
+    /* FOOTER RESPONSIVE */
+
+    .footer {
+        padding: calc(100vw / (412 / var(--res-footer-padding)));
+        gap: calc(100vw / (412 / var(--res-footer-gap)));
+        margin-bottom: calc(100vh / (915 / var(--res-footer-margin-bottom)));
+    }
+
+    .footer span {
+        font-size: calc(100vw / (412 / var(--res-footer-span-font-size)));
+    }
+
+    .footer .socials {
+        height: 100%;
+        gap: calc(100vw / (412 / var(--res-footer-socials-gap)));
+    }
+
+    .footer .socials img {
+        width: 100%;
+        height: calc(100vh / (915 / var(--res-footer-socials-img-height)));;
+        object-fit: cover;
+    }
+
+    /* FOOTER END RESPONSIVE */
+
+    .row {
+        flex-direction: column !important;
+    }
+
+    .row-reverse {
+        flex-direction: column !important;
+    }
+
+
+    /* SECTION CONTAINER RESPONSIVE END */
+
+
+    @keyframes menu-item-anim {
+        100% {
+            border-radius: calc(100vh / (915 / var(--res-menu-a-page-hover-menu-item-anim-border-radius-top))) calc(100vh / (915 / var(--res-menu-a-page-hover-menu-item-anim-border-radius-left)));
+        }
+    }
+
+    @keyframes name-effect {
+        from {
+            width: 0px;
+        }
+
+        to {
+            width: 175px;
+        }
+    }
+}
