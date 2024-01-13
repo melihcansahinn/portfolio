@@ -382,6 +382,17 @@ body {
 
 /* NAVBAR END */
 
+/* WRAPPER */
+
+.wrapper {
+    display: flex;
+    min-height: 89vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* WRAPPER END */
+
 /* SECTION CONTAINER */
 
 .container {
@@ -392,6 +403,11 @@ body {
     font-family: 'Raleway', sans-serif;
     position: relative;
     z-index: 1;
+}
+
+.container h1 {
+    margin-top: 30px;
+    font-size: calc(100vw / (1920 / var(--project-container-title-p-font-size)));
 }
 
 .container .project-container {
@@ -801,7 +817,6 @@ body {
         --res-footer-socials-gap: 8;
         --res-footer-socials-img-height: 20;
         --res-footer-margin-bottom: 35;
-
     }
 
     /* STICKY INFO RESPONSIVE */
