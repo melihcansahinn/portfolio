@@ -745,6 +745,7 @@ body {
         /*  */
         --res-navbar-menu-a-height: 50;
         --res-navbar-menu-a-font-size: 20;
+        --res-navbar-menu-a-after-font-size: 16;
         --res-navbar-menu-a-active-border-top: 10;
         --res-navbar-menu-a-active-border-left: 20;
         --res-menu-a-page-hover-menu-item-anim-border-radius-top: 15;
@@ -882,6 +883,10 @@ body {
         border-left: calc(100vw / (412 / var(--res-navbar-menu-a-active-border-left))) solid transparent;
         border-right: calc(100vw / (412 / var(--res-navbar-menu-a-active-border-left))) solid transparent;
         border-top: calc(100vh / (915 / var(--res-navbar-menu-a-active-border-top))) solid rgb(220, 215, 201);
+    }
+
+    .navbar .menu a.page::after {
+        font-size: calc(100vw / (412 / var(--res-navbar-menu-a-after-font-size)));
     }
 
     .navbar .profile-photo {
