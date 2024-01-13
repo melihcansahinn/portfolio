@@ -6,3 +6,12 @@
 
 **<p>🌐https://melihcansahinn.github.io/portfolio/</p>**
 
+## Responsive Design Explanation and Examples;
+
+- Root variables have been set for all css variables.( font-size, width, height etc. )
+- Only ````@media screen and (orientation: portrait)```` has been used for portrait dimensions.
+- Portrait responsive design based on 412px - 915px resolution.
+
+Examples;
+- ````height: calc(100vh / (915 / var(--res-sticky-info-height)));````
+- ````width: calc(100vh / (412 / var(--res-sticky-info-width)));````
