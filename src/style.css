@@ -405,11 +405,6 @@ body {
     z-index: 1;
 }
 
-.container h1 {
-    margin-top: 30px;
-    font-size: calc(100vw / (1920 / var(--project-container-title-p-font-size)));
-}
-
 .container .project-container {
     display: flex;
     justify-content: start;
@@ -886,7 +881,7 @@ body {
         top: 99%;
         border-left: calc(100vw / (412 / var(--res-navbar-menu-a-active-border-left))) solid transparent;
         border-right: calc(100vw / (412 / var(--res-navbar-menu-a-active-border-left))) solid transparent;
-        border-top: calc(100vw / (412 / var(--res-navbar-menu-a-active-border-top))) solid rgb(220, 215, 201);
+        border-top: calc(100vh / (915 / var(--res-navbar-menu-a-active-border-top))) solid rgb(220, 215, 201);
     }
 
     .navbar .profile-photo {
@@ -897,7 +892,7 @@ body {
     .navbar .profile-photo::after {
         padding: 0px calc(100vw / (412 / var(--res-navbar-profile-photo-after-padding-left)));
         width: calc(100vw / (412 / var(--res-navbar-profile-photo-after-width)));
-        top: calc(100vw / (412 / var(--res-navbar-profile-photo-after-top)));
+        top: calc(100vh / (915 / var(--res-navbar-profile-photo-after-top)));
         font-size: calc(100vw / (412 / var(--res-navbar-profile-photo-after-font-size)));
         border-right: calc(100vw / (412 / var(--res-navbar-profile-photo-after-border-right))) solid transparent;
         white-space: nowrap;
@@ -905,9 +900,9 @@ body {
     }
 
     .navbar .profile-photo .img-container {
-        top: calc(100vw / (412 / var(--res-navbar-profile-photo-img-container-top)) * -1);
-        width: calc(100vw / (412 / var(--res-navbar-profile-photo-img-container-width)));
-        height: calc(100vw / (412 / var(--res-navbar-profile-photo-img-container-width)));
+        top: calc(100vh / (915 / var(--res-navbar-profile-photo-img-container-top)) * -1);
+        width: calc(100vh / (915 / var(--res-navbar-profile-photo-img-container-width)));
+        height: calc(100vh / (915 / var(--res-navbar-profile-photo-img-container-width)));
         border-radius: 100% 100%;
         border: calc(100vw / (412 / var(--res-navbar-profile-photo-img-container-border))) solid rgb(44, 54, 57);
     }
@@ -925,15 +920,15 @@ body {
     /* SECTION CONTAINER RESPONSIVE */
 
     .container {
-        margin-top: calc(100vw / (412 / var(--res-container-margin-top)));
+        margin-top: calc(100vh / (915 / var(--res-container-margin-top)));
     }
 
     .container .project-container {
-        padding: calc(100vw / (412 / var(--res-container-project-container-padding)));
+        padding: calc(100vh / (915 / var(--res-container-project-container-padding))) calc(100vw / (412 / var(--res-container-project-container-padding)));
     }
 
     .container .project-container .title {
-        padding: calc(100vw / (412 / var(--res-container-project-container-title-padding)));
+        padding: calc(100vh / (915 / var(--res-container-project-container-title-padding))) calc(100vw / (412 / var(--res-container-project-container-title-padding)));
     }
 
     .container .project-container .title p {
