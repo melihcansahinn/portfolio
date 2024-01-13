@@ -979,8 +979,8 @@ body {
 
     .container .project-container .project .divider .project-images {
         grid-template-columns: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-images-column-width))) calc(100vw / (412 / var(--res-container-project-container-project-divider-project-images-column-width)));
-        grid-template-rows: calc(100vh / (915 / var(--res-container-project-container-project-divider-project-images-row-height)));
-        grid-auto-rows: calc(100vh / (915 / var(--res-container-project-container-project-divider-project-images-row-height)));
+        grid-template-rows: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-images-column-width)));
+        grid-auto-rows: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-images-column-width)));
         padding: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-images-padding))) 0px;
         gap: calc(100vw / (412 / var(--res-container-project-container-project-divider-project-images-gap)));
     }
