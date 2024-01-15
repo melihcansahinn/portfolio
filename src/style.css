@@ -48,6 +48,11 @@
     /*  */
     --container-margin-top: 155;
     /*  */
+    --container-h1-font-size: 35;
+    --container-h1-letter-spacing: 3;
+    --container-h2-font-size: 28;
+    --container-p-font-size: 20;
+    /*  */
     --project-container-min-height: 550;
     --project-container-padding-left: 20;
     --project-container-padding-top: 5;
@@ -123,6 +128,18 @@ body {
 }
 
 /* ROOTS */
+.align-left {
+    align-items: start;
+}
+
+.align-right {
+    align-items: end;
+}
+
+.align-center {
+    align-items: center;
+}
+
 .justify-right {
     justify-content: right !important;
 }
@@ -171,6 +188,19 @@ body {
 
 .border-none {
     border: none !important;
+}
+
+.p-2 {
+    padding: 2%;
+}
+
+.mt-0 {
+    margin-top: 0px !important;
+}
+
+.py-2 {
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 /* ROOTS */
@@ -386,7 +416,6 @@ body {
 
 .wrapper {
     display: flex;
-    min-height: 89vh;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -403,6 +432,23 @@ body {
     font-family: 'Raleway', sans-serif;
     position: relative;
     z-index: 1;
+}
+
+.container h1 {
+    font-size: calc(100vw / (1920 / var(--container-h1-font-size)));
+    color: white;
+    letter-spacing: calc(100vw / (1920 / var(--container-h1-letter-spacing)));
+}
+
+.container h2 {
+    font-size: calc(100vw / (1920 / var(--container-h2-font-size)));
+    font-weight: 400;
+    color: wheat;
+}
+
+.container p {
+    color: rgb(220, 215, 201);
+    font-size: calc(100vw / (1920 / var(--container-p-font-size)));
 }
 
 .container .project-container {
@@ -762,7 +808,16 @@ body {
         --res-navbar-profile-photo-after-border-right: 2;
         --res-navbar-profile-photo-after-letter-spacing: 1;
         /*  */
+        --res-wrapper-min-height: 795;
+        /*  */
         --res-container-margin-top: 65;
+        /*  */
+        --res-container-p-font-size: 11;
+        /*  */
+        --res-container-h1-font-size: 23;
+        --res-container-h1-letter-spacing: 2;
+        /*  */
+        --res-container-h2-font-size: 13;
         /*  */
         --res-container-project-container-padding: 15;
         /*  */
@@ -924,8 +979,29 @@ body {
 
     /* SECTION CONTAINER RESPONSIVE */
 
+    .wrapper {
+        min-height: calc(100vh / (915 / var(--res-wrapper-min-height)));
+    }
+
     .container {
         margin-top: calc(100vh / (915 / var(--res-container-margin-top)));
+    }
+
+    .container h1 {
+        font-size: calc(100vw / (412 / var(--res-container-h1-font-size)));
+        color: white;
+        letter-spacing: calc(100vw / (412 / var(--res-container-h1-letter-spacing)));
+    }
+    
+    .container h2 {
+        font-size: calc(100vw / (412 / var(--res-container-h2-font-size)));
+        font-weight: 400;
+        color: wheat;
+    }
+    
+    .container p {
+        color: rgb(220, 215, 201);
+        font-size: calc(100vw / (412 / var(--res-container-p-font-size)));
     }
 
     .container .project-container {
