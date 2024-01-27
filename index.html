@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;500;600&family=Raleway:wght@300;400;500&family=Ubuntu:wght@300&display=swap"
         rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./src/style.css">
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/6/68/Mandoo_%22M%22_logo.png"
@@ -63,20 +64,16 @@
 
                         <div class="project-images">
                             <div class="item">
-                                <img src="./src/fitnessproject/ss1.png"
-                                    alt="Screenshot for Fitness Project 1">
+                                <img src="./src/fitnessproject/ss1.png" alt="Screenshot for Fitness Project 1">
                             </div>
                             <div class="item secondary">
-                                <img src="./src/fitnessproject/ss2.png"
-                                    alt="">
+                                <img src="./src/fitnessproject/ss2.png" alt="">
                             </div>
                             <div class="item">
-                                <img src="./src/fitnessproject/ss3.png"
-                                    alt="">
+                                <img src="./src/fitnessproject/ss3.png" alt="">
                             </div>
                             <div class="item">
-                                <img src="./src/fitnessproject/ss4.png"
-                                    alt="">
+                                <img src="./src/fitnessproject/ss4.png" alt="">
                             </div>
                         </div>
 
@@ -84,7 +81,10 @@
                             <span>Project Details</span>
 
                             <p>The project created with Bootstrap and under development.
-                                It is about a fitness & gym hall. There are home, login and register pages right now. People can see the main things about the place, latest updates and more. Also i will add some other pages like; Programs, Membership, Prices, Profile pages. It is live on github and free for everyone!</p>
+                                It is about a fitness & gym hall. There are home, login and register pages right now.
+                                People can see the main things about the place, latest updates and more. Also i will add
+                                some other pages like; Programs, Membership, Prices, Profile pages. It is live on github
+                                and free for everyone!</p>
                         </div>
 
                     </div>
@@ -419,6 +419,12 @@
             </div>
         </section>
 
+        <div class="img-js" id="img-js-main">
+            <div class="img-js-container">
+                <img src="" alt="" id="img-js">
+            </div>
+        </div>
+
         <footer class="footer">
             <span>Melihcan Şahin - 2023</span>
             <div class="socials">
@@ -436,6 +442,16 @@
 
     </div>
 
+    <script>
+        $("#img-js-main").on("click", function () {
+            $("#img-js").attr("src", "");
+            $("#img-js-main").css({"display": "none"});
+        });
+        $("img").on("click", function () {
+            $("#img-js").attr("src", $(this).attr("src"));
+            $("#img-js-main").css({"display": "flex"});
+        })
+    </script>
 </body>
 
 </html>

@@ -546,6 +546,7 @@ body {
     height: 100%;
     object-fit: cover;
     transition: all .5s linear;
+    cursor: pointer;
 }
 
 .container .project-container .project .divider .project-images .item:hover {
@@ -688,6 +689,37 @@ body {
 }
 
 /* FOOTER END */
+
+/* JS IMAGE */
+
+.img-js {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-js .img-js-container {
+    width: 60%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.8);;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.img-js .img-js-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* JS IMAGE END */
 
 @keyframes sticky-info-border {
     50% {
