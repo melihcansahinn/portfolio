@@ -1,7 +1,5 @@
 # Portfolio Project ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  
 
-**The Project is under development.**
-
 ## To visit;
 
 **<p>🌐[melihcansahinn/portfolio/](https://melihcansahinn.github.io/portfolio/)</p>**
@@ -15,4 +13,4 @@
 
 Examples;
 - ````height: calc(100vh / (915 / var(--res-sticky-info-height)));````
-- ````width: calc(100vh / (412 / var(--res-sticky-info-width)));````
+- ````width: calc(100vw / (412 / var(--res-sticky-info-width)));````
