@@ -81,8 +81,10 @@
                             <span>Project Details</span>
 
                             <p>The project created with BOOTSTRAP and a little bit CSS.
-                                It is about fitness & gym hall. Included pages in project are Home, Login, Register, Programs, Memberships Pages.
-                                Used a little bit jquery and javascript for some pages and contents. This project is a simple template to ready to use for everyone who wants!</p>
+                                It is about fitness & gym hall. Included pages in project are Home, Login, Register,
+                                Programs, Memberships Pages.
+                                Used a little bit jquery and javascript for some pages and contents. This project is a
+                                simple template to ready to use for everyone who wants!</p>
                         </div>
 
                     </div>
@@ -114,7 +116,9 @@
                         <div class="project-about" onclick="">
                             <span>Project Details</span>
 
-                            <p>Recipes project is about random breakfast recipes. Used edamam public api for recipes and fetching 20 breakfast recipes every page load or manual refresh recipes. Used bootstrap for css and created with js.
+                            <p>Recipes project is about random breakfast recipes. Used edamam public api for recipes and
+                                fetching 20 breakfast recipes every page load or manual refresh recipes. Used bootstrap
+                                for css and created with js.
                             </p>
                         </div>
 
@@ -399,8 +403,16 @@
         </section>
 
         <div class="img-js" id="img-js-main">
-            <div class="img-js-container">
+            <div class="img-js-container" id="img-js-container" style="z-index: 1001;">
                 <img src="" alt="" id="img-js">
+                <div class="right-container" id="slider-next-button">
+                    <div class="right"></div>
+                </div>
+                <div class="left-container" id="slider-prev-button">
+                    <div class="left"></div>
+                </div>
+            </div>
+            <div class="img-js-background" id="img-js-background" style="z-index: 999;">
             </div>
         </div>
 
@@ -421,16 +433,7 @@
 
     </div>
 
-    <script>
-        $("#img-js-main").on("click", function () {
-            $("#img-js").attr("src", "");
-            $("#img-js-main").css({"display": "none"});
-        });
-        $("img").on("click", function () {
-            $("#img-js").attr("src", $(this).attr("src"));
-            $("#img-js-main").css({"display": "flex"});
-        })
-    </script>
+    <script src="./src/js/mlhSlider.js"></script>
 </body>
 
 </html>

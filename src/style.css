@@ -114,6 +114,15 @@
     --footer-span-margin-bottom: 30;
     --footer-socials-gap: 5;
     --footer-socials-img-height: 28;
+
+
+    /* */
+    --slider-border-radius: 30;
+    --slider-button-width: 60;
+    --slider-button-border-width: 6;
+    --slider-button-right-left: 10;
+    --slider-button-radius: 2;
+    --slider-container-padding: 3;
 }
 
 body {
@@ -497,7 +506,8 @@ body {
     text-shadow: 0px 0px calc(100vw / (1920 / var(--project-container-project-name-hover-text-shadow))) rgb(44, 54, 57);
 }
 
-.container .project-container .project span.project-title, .container .project-container .project a.project-title {
+.container .project-container .project span.project-title,
+.container .project-container .project a.project-title {
     font-size: calc(100vw / (1920 / var(--project-container-project-project-title-font-size)));
     text-shadow: 0px 0px calc(100vw / (1920 / var(--project-container-project-project-title-text-shadow))) gray;
     padding: calc(100vw / (1920 / var(--project-container-project-project-title-padding)));
@@ -699,24 +709,93 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(51, 51, 51, 0.5);
     display: none;
     justify-content: center;
     align-items: center;
 }
 
+.img-js .img-js-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 4;
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
 .img-js .img-js-container {
-    width: 60%;
+    width: 80%;
     height: 80%;
-    background-color: rgba(0, 0, 0, 0.8);;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: calc(100vw / (1920 / var(--slider-border-radius)));
+    position: relative;
 }
 
 .img-js .img-js-container img {
-    width: 100%;
+    width: 90%;
     height: 100%;
+    transition: all .5s ease-in-out;
     object-fit: contain;
+}
+
+.img-js .img-js-container .right-container,
+.img-js .img-js-container .left-container {
+    position: absolute;
+    top: 50%;
+    width: calc(100vw / (1920 / var(--slider-button-width)));
+    height: calc(100vw / (1920 / var(--slider-button-width)));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: calc(100vw / (1920 / var(--slider-container-padding)));
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 20%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: all .2s ease-in-out;
+}
+
+.img-js .img-js-container .right-container:hover,
+.img-js .img-js-container .left-container:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.img-js .img-js-container .right-container {
+    right: calc(100vw / (1920 / var(--slider-button-right-left)));
+}
+
+.img-js .img-js-container .left-container {
+    left: calc(100vw / (1920 / var(--slider-button-right-left)));
+}
+
+.img-js .img-js-container .right-container .right,
+.img-js .img-js-container .left-container .left {
+    border-color: rgb(220, 215, 201);
+    width: 65%;
+    height: 65%;
+    transition: all .2s ease-in-out;
+}
+
+.img-js .img-js-container .right-container:hover .right,
+.img-js .img-js-container .left-container:hover .left {
+    border-color: #666;
+}
+
+.img-js .img-js-container .right {
+    transform: translateX(-25%) rotate(-45deg);
+    border-width: 0px calc(100vw / (1920 / var(--slider-button-border-width))) calc(100vw / (1920 / var(--slider-button-border-width))) 0px;
+    border-style: solid;
+    border-bottom-right-radius: calc(100vw / (1920 / var(--slider-button-radius)));
+}
+
+.img-js .img-js-container .left {
+    transform: translateX(25%) rotate(45deg);
+    left: calc(100vw / (1920 / var(--slider-button-right-left)));
+    border-width: 0px 0px calc(100vw / (1920 / var(--slider-button-border-width))) calc(100vw / (1920 / var(--slider-button-border-width)));
+    border-style: solid;
+    border-bottom-left-radius: calc(100vw / (1920 / var(--slider-button-radius)));
 }
 
 /* JS IMAGE END */
@@ -938,6 +1017,7 @@ body {
         width: 100%;
         text-align: left;
     }
+
     .sticky-info p {
         justify-content: center;
     }
@@ -1035,13 +1115,13 @@ body {
         color: white;
         letter-spacing: calc(100vw / (412 / var(--res-container-h1-letter-spacing)));
     }
-    
+
     .container h2 {
         font-size: calc(100vw / (412 / var(--res-container-h2-font-size)));
         font-weight: 400;
         color: wheat;
     }
-    
+
     .container p {
         color: rgb(220, 215, 201);
         font-size: calc(100vw / (412 / var(--res-container-p-font-size)));
@@ -1086,7 +1166,8 @@ body {
         text-shadow: 0px 0px calc(100vw / (412 / var(--res-container-project-container-project-name-hover-text-shadow))) rgb(44, 54, 57);
     }
 
-    .container .project-container .project span.project-title, .container .project-container .project a.project-title {
+    .container .project-container .project span.project-title,
+    .container .project-container .project a.project-title {
         font-size: calc(100vw / (412 / var(--res-container-project-container-project-project-title-font-size)));
         text-shadow: 0px 0px calc(100vw / (412 / var(--res-container-project-container-project-project-title-text-shadow))) gray;
         padding: calc(100vw / (412 / var(--res-container-project-container-project-project-title-padding)));
@@ -1175,7 +1256,8 @@ body {
 
     .footer .socials img {
         width: 100%;
-        height: calc(100vw / (412 / var(--res-footer-socials-img-height)));;
+        height: calc(100vw / (412 / var(--res-footer-socials-img-height)));
+        ;
         object-fit: cover;
     }
 
@@ -1194,13 +1276,13 @@ body {
     .img-js .img-js-container {
         width: 90%;
         height: 60%;
-        background-color: rgba(0, 0, 0, 0.8);;
+        background-color: rgba(0, 0, 0, 0.8);
         overflow: hidden;
-        border-radius: 30px;
+        border-radius: calc(100vw / (1920 / var(--slider-border-radius)));
     }
-    
+
     .img-js .img-js-container img {
-        width: 100%;
+        width: 90%;
         height: 100%;
         object-fit: contain;
     }
